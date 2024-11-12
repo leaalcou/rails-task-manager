@@ -1,0 +1,13 @@
+<h1>TODO</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+  <div class="task-card">
+    <li><%= link_to task.title, task_path(task) %></li>
+  </div>
+    <% end %>
+</ul>
+
+<%= link_to tasks_new_path do%>
+<i class="fa-solid fa-square-plus"></i>
+<% end %>
